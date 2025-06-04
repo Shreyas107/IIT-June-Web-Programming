@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta name="author" content="Shreyas Jadhav" />
+  <title>Sunbeam</title>
+  <meta name="description" content="Form tags" />
+</head>
+
+<body>
+  <h1>Admission Form</h1>
+  <form id="admissionForm" method="post" action="demo17action.html">
+    <div>
+      <label for="fnameInput">First Name: </label>
+      <input id="fnameInput" type="text" name="fname" placeholder="First Name" autofocus required />
+    </div>
+    <br />
+    <div>
+      <label for="lnameInput">Last Name: </label>
+      <input id="lnameInput" type="text" name="lname" placeholder="Last Name" required />
+    </div>
+    <br />
+    <div>
+      <label for="nameInput">Full Name: </label>
+      <input id="nameInput" type="text" name="name" placeholder="Name on Certificate" required />
+    </div>
+    <br />
+    <div>
+      <label for="passwdInput">Password: </label>
+      <input id="passwdInput" type="password" name="passwd" placeholder="Password" minlength="4" maxlength="12"
+        required />
+    </div>
+    <br />
+    <div>
+      <label for="confirmPasswdInput">Confirm Password: </label>
+      <input id="confirmPasswdInput" type="password" name="confirmpasswd" placeholder="Confirm Password" required />
+    </div>
+    <br />
+    <div>
+      <label for="emailInput">Email: </label>
+      <input id="emailInput" type="email" name="email" placeholder="Email" required />
+    </div>
+    <br />
+    <div>
+      <label for="mobileInput">Mobile: </label>
+      <input id="mobileInput" type="tel" name="mobile" placeholder="Mobile" required />
+    </div>
+    <br />
+    <div>
+      <label>Gender: </label>
+      <input id="maleInput" type="radio" name="subscribe" value="M" />
+      <label for="maleInput">Male</label>
+      <input id="femaleInput" type="radio" name="subscribe" value="F" />
+      <label for="femaleInput">Female</label>
+    </div>
+    <br />
+    <div>
+      <label for="birthInput">Birth: </label>
+      <input id="birthInput" name="birthDate" type="date" required />
+      <input id="birthTimeInput" name="birthTime" type="time" required />
+    </div>
+    <br />
+    <div>
+      <label for="cityInput">City: </label>
+      <select id="cityInput" name="city">
+        <option>Select City</option>
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Karad</option>
+        <option>Nasik</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label for="photoInput">Photo: </label>
+      <input id="photoInput" name="photo" type="file" required />
+    </div>
+    <br />
+    <div>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Clear" />
+    </div>
+  </form>
+  <!--
+     input type=email: does data validation as well as enables right keyboard in mobile device.
+     required: makes field compulsory.
+     readonly: makes a input textbox as readonly.
+    -->
+</body>
+
+</html>

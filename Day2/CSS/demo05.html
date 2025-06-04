@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="External, Internal, and Inline CSS" />
+  <title>CSS Demo</title>
+  <link rel="stylesheet" href="demo05.css" />
+  <style>
+    h2 {
+      color: rgb(39, 255, 64);
+      /*text-align: center; inherited from external css*/
+    }
+
+    p {
+      border: 4px solid magenta;
+      background-color: blue;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>First Headline</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi, illum saepe aliquid tenetur numquam dolor ad
+    voluptates aut minima ab libero dignissimos, possimus cupiditate omnis, iure exercitationem corporis in?</p>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi necessitatibus non quibusdam cupiditate
+    voluptatum? Qui, quas nisi quaerat dolore, aliquam modi numquam sapiente temporibus illo, doloribus repudiandae odio
+    dolorem porro rerum voluptatem?</p>
+  <h2>Second Headline</h2>
+  <!-- 
+    Background-color overridden by inline CSS. 
+    The other settings inherited from external & internal css.
+    -->
+  <p style="background-color: rgb(252, 255, 46)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum
+    ipsam
+    molestias rerum inventore itaque repellendus, nisi quaerat eligendi praesentium, ut error. Pariatur deleniti enim
+    quisquam vel mollitia harum voluptates.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At blanditiis saepe unde! Ducimus temporibus, amet
+    praesentium voluptatem doloremque quam. Illum illo corrupti quae vero velit delectus temporibus assumenda
+    reprehenderit, numquam unde eligendi autem, aliquam molestiae tempora eveniet exercitationem, dicta cupiditate rem
+    quasi nulla? Quisquam maxime excepturi quibusdam fuga esse sequi dolore omnis natus quasi nobis eius vitae repellat
+    harum laboriosam, officia, ut velit. Aspernatur.</p>
+</body>
+
+</html>
+
+<!-- 
+    Priority order (highest to lowest):
+      Inline CSS > Internal CSS > External CSS
+-->

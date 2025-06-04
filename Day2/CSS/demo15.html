@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Nilesh Ghule" />
+  <meta name="description" content="Text decoration" />
+  <title>CSS Demo</title>
+  <style>
+    span {
+      font-size: 104px;
+      font-family: "Segoe UI";
+    }
+
+    .red {
+      color: red;
+    }
+
+    .orange {
+      color: orange;
+    }
+
+    .yellow {
+      color: yellow;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .indigo {
+      color: indigo;
+    }
+
+    .violet {
+      color: violet;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      /*text-shadow: h-shadow v-shadow blur-radius color*/
+      /*h-shadow: x offset, v-shadow: y offset*/
+      /*multiple shadows separated by comma - blend*/
+
+      text-shadow: 1px 1px 5px red, -1px -1px 5px blue;
+    }
+
+    /* 
+        text-shadow: h-shadow v-shadow blur-radius color;
+        
+        h-shadow: Horizontal offset — how far the shadow moves left/right.
+
+        v-shadow: Vertical offset — how far the shadow moves up/down.
+
+        blur-radius: Optional — how blurry the shadow appears.
+
+        color: The color of the shadow.
+
+          1px 1px 5px red,   /* First shadow: red, bottom-right, blurred 
+         -1px -1px 5px blue; /* Second shadow: blue, top-left, blurred */
+    */
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <span class="violet">S</span>
+    <span class="indigo">U</span>
+    <span class="green">N</span>
+    <span class="blue">B</span>
+    <span class="yellow">E</span>
+    <span class="orange">A</span>
+    <span class="red">M</span>
+  </div>
+  <h1 class="center">Exploring New Ideas, Reaching New Heights!</h1>
+</body>
+
+</html>

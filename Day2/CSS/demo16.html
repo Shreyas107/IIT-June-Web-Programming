@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Table decoration" />
+  <title>CSS Demo</title>
+  <style>
+    table.table1 {
+      width: 100%;
+      border: 4px solid black;
+    }
+
+    table.table1 td,
+    table.table1 th {
+      border: 1px dashed red;
+    }
+
+    table.table1>thead>tr {
+      color: white;
+      background-color: green;
+    }
+
+    table.table1>tfoot>tr {
+      color: black;
+      background-color: chartreuse;
+    }
+
+    table.table1>tbody>tr:nth-child(even) {
+      background-color: lightgoldenrodyellow;
+    }
+
+    table.table1>tbody>tr:nth-child(odd) {
+      background-color: magenta;
+    }
+
+    table.table2 {
+      border: 2px solid red;
+    }
+
+    table.table2 td,
+    table.table2 th {
+      border: 1px solid black;
+    }
+
+    table.table2>thead>tr {
+      color: white;
+      background-color: black;
+    }
+
+    table.table2>tbody tr {
+      background-color: lightgray;
+    }
+
+    table.table2>tfoot>tr {
+      color: white;
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Favorite Books</h1>
+  <table class="table2">
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Price (Rs.)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Chhava</td>
+        <td>Shivaji Sawant</td>
+        <td>Historical</td>
+        <td>450</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mrityunjay</td>
+        <td>Shivaji Sawant</td>
+        <td>Historical</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Yugandhar</td>
+        <td>Shivaji Sawant</td>
+        <td>Mythological</td>
+        <td>550</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Shriman Yogi</td>
+        <td>Ranjit Desai</td>
+        <td>Historical</td>
+        <td>600</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Batatyachi Chawl</td>
+        <td>P.L. Deshpande</td>
+        <td>Social</td>
+        <td>250</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Swami</td>
+        <td>Ranjit Desai</td>
+        <td>Historical</td>
+        <td>400</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Pawankhind</td>
+        <td>Ranjit Desai</td>
+        <td>Historical</td>
+        <td>350</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Raja Ravi Verma</td>
+        <td>Ranjit Desai</td>
+        <td>Biography</td>
+        <td>450</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Yayati</td>
+        <td>V. S. Khandekar</td>
+        <td>Mythological</td>
+        <td>500</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="2">Total Books: 9</th>
+        <th colspan="2">Total Price:</th>
+        <th>Rs. 4050/-</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
