@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            border: 2px solid black;
+        }
+
+        .box {
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Example 1: Padding on all sides (10px) */
+        .box1 {
+            padding: 10px;
+        }
+
+        /* Example 2: Different padding values for top/bottom & left/right */
+        .box2 {
+            padding: 20px 40px;
+            /* 20px top & bottom, 40px left & right */
+        }
+
+        /* Example 3: Specific padding for each side */
+        .box3 {
+            padding: 20px 40px 60px 80px;
+            /* top, right, bottom, left */
+        }
+
+        /* Example 4: Auto padding (centering horizontally and vertically) */
+        .box4 {
+            padding: 20px;
+            margin: auto;
+        }
+
+        /* Example 5: Shorthand padding for top/bottom & left/right */
+        .box5 {
+            padding: 10px 30px;
+            /* 10px top & bottom, 30px left & right */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Padding: 10px (all sides)</div>
+        <div class="box box2">Padding: 20px (top & bottom), 40px (left & right)</div>
+        <div class="box box3">Padding: 20px (top), 40px (right), 60px (bottom), 80px (left)</div>
+        <div class="box box4">Padding: 20px (centered with auto margin)</div>
+        <div class="box box5">Padding: 10px (top & bottom), 30px (left & right)</div>
+    </div>
+</body>
+
+</html>

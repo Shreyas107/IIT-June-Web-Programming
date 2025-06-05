@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nilesh Ghule" />
+    <meta name="description" content="Display Property" />
+    <title>CSS display</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>CSS Display Property</h2>
+    The display property has several values, each with its own behavior:
+    <ul>
+      <li>block</li>
+      <li>inline</li>
+      <li>inline-block</li>
+      <li>none</li>
+      <li>flex</li>
+      <li>grid</li>
+      <li>inline-flex</li>
+      <li>inline-grid</li>
+      <li>table, table-row, table-cell</li>
+    </ul>
+    <h3>block elements</h3>
+    <p>The element generates a block-level box. It starts on a new line and takes up the full width available.</p>
+    <p>Real-World Example: Paragraphs in a blog post or sections of a webpage.</p>
+    <div style="display: block; background: lightblue; padding: 10px">This is a block-level element.</div>
+    <div style="display: block; background: lightgreen; padding: 10px">This is another block-level element.</div>
+    <h3>inline elements</h3>
+    <p>The element generates an inline-level box. It does not start on a new line and only takes up as much width as its content.</p>
+    <p>Real-World Example: Links in a navigation bar or text within a paragraph.</p>
+    <span style="display: inline; background: lightblue; padding: 10px"> This is an inline element. </span>
+    <span style="display: inline; background: lightgreen; padding: 10px"> This is another inline element. </span>
+    <h3>inline-block elements</h3>
+    <p>The element generates a block-level box but behaves like an inline element. It does not start on a new line but can have a width, height, padding, and margin.</p>
+    <p>Real-World Example: Buttons in a toolbar or icons in a navigation menu.</p>
+    <div style="display: inline-block; width: 100px; background: lightblue; padding: 10px">Inline-block</div>
+    <div style="display: inline-block; width: 100px; background: lightgreen; padding: 10px">Inline-block</div>
+    <h3>none</h3>
+    <p>The element is completely removed from the document flow and is not rendered.</p>
+    <p>Real-World Example: Hiding elements dynamically with JavaScript (e.g., dropdown menus, modals).</p>
+    <div style="display: none; background: lightblue; padding: 10px">This element is hidden.</div>
+    <div style="background: lightgreen; padding: 10px">This element is visible. The above one is not.</div>
+    <h3>flex elements</h3>
+    <p>The element becomes a flex container, and its children become flex items. It enables a flexible layout for distributing space and aligning items.</p>
+    <p>Real-World Example: Creating responsive navigation bars, card layouts, or centering content.</p>
+    <div style="display: flex; justify-content: space-between; background: lightblue; padding: 10px">
+      <div style="background: lightgreen; padding: 10px">Item 1</div>
+      <div style="background: lightcoral; padding: 10px">Item 2</div>
+      <div style="background: lightyellow; padding: 10px">Item 3</div>
+      <div style="background: lightcyan; padding: 10px">Item 4</div>
+    </div>
+    <h3>grid elements</h3>
+    <p>The element becomes a grid container, and its children become grid items. It enables a two-dimensional layout system.</p>
+    <p>Real-World Example: Creating complex layouts like image galleries, or dashboards.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: lightblue; padding: 10px">
+      <div style="background: lightgreen; padding: 10px">Item 1</div>
+      <div style="background: lightcoral; padding: 10px">Item 2</div>
+      <div style="background: lightyellow; padding: 10px">Item 3</div>
+      <div style="background: green; padding: 10px">Item 4</div>
+      <div style="background: coral; padding: 10px">Item 5</div>
+      <div style="background: yellow; padding: 10px">Item 6</div>
+    </div>
+    <h3>inline-flex and inline-grid elements</h3>
+    <p>These values make the element behave like an inline element but allow its children to be flex or grid items.</p>
+    <p>Real-World Example: Inline flex or grid containers for buttons or icons.</p>
+    <div style="display: inline-flex; background: lightblue; padding: 10px">
+      <div style="background: lightgreen; padding: 10px; margin: 4px">Inline Flex1</div>
+      <div style="background: lightgreen; padding: 10px; margin: 4px">Inline Flex2</div>
+      <div style="background: lightgreen; padding: 10px; margin: 4px">Inline Flex3</div>
+      <div style="background: lightgreen; padding: 10px; margin: 4px">Inline Flex4</div>
+    </div>
+    <div style="display: inline-grid; background: lightcoral; padding: 10px; grid-template-columns: 1fr 1fr">
+      <div style="background: lightyellow; padding: 10px; margin: 4px">Inline Grid1</div>
+      <div style="background: lightyellow; padding: 10px; margin: 4px">Inline Grid2</div>
+      <div style="background: lightyellow; padding: 10px; margin: 4px">Inline Grid3</div>
+      <div style="background: lightyellow; padding: 10px; margin: 4px">Inline Grid4</div>
+    </div>
+    <h3>table, table-row & table-cell elements</h3>
+    <p>These values allow elements to behave like HTML table elements.</p>
+    <p>Real-World Example: Creating table-like layouts without using <table> elements.</p>
+    <div style="display: table; width: 100%; background: lightblue">
+      <div style="display: table-row">
+        <div style="display: table-cell; padding: 10px; background: lightgreen">Cell 1</div>
+        <div style="display: table-cell; padding: 10px; background: lightcoral">Cell 2</div>
+        <div style="display: table-cell; padding: 10px; background: green">Cell 3</div>
+      </div>
+      <div style="display: table-row"></div>
+      <div style="display: table-cell; padding: 10px; background: coral">Cell 4</div>
+      <div style="display: table-cell; padding: 10px; background: lightgreen">Cell 5</div>
+      <div style="display: table-cell; padding: 10px; background: lightcoral">Cell 6</div>
+    </div>
+  </body>
+</html>

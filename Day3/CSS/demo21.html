@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Nilesh Ghule" />
+  <meta name="description" content="CSS Properties & Sticky Table Header" />
+  <title>CSS Properties</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    thead {
+      position: sticky;
+      top: 0px;
+    }
+
+    h2 {
+      text-align: center;
+      color: red;
+      text-shadow: 2px 2px 10px lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>CSS Properties Reference</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sr</th>
+        <th>Property Name</th>
+        <th>Property Description</th>
+        <th>Most Common Use Cases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><code>color</code></td>
+        <td>Sets the text color of an element.</td>
+        <td>Styling text, links, headings, etc.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><code>background-color</code></td>
+        <td>Sets the background color of an element.</td>
+        <td>Adding background colors to sections, buttons, etc.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><code>font-size</code></td>
+        <td>Sets the size of the font.</td>
+        <td>Adjusting text size for readability and design.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><code>margin</code></td>
+        <td>Sets the margin area around an element.</td>
+        <td>Creating space between elements.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><code>padding</code></td>
+        <td>Sets the padding area inside an element.</td>
+        <td>Adding space inside elements (e.g., buttons, containers).</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><code>border</code></td>
+        <td>Sets the border of an element.</td>
+        <td>Adding borders to buttons, tables, images, etc.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><code>display</code></td>
+        <td>Controls the display behavior of an element.</td>
+        <td>Changing layout (e.g., block, inline, flex, grid).</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><code>position</code></td>
+        <td>Specifies the positioning method for an element.</td>
+        <td>Positioning elements (e.g., relative, absolute, fixed).</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><code>float</code></td>
+        <td>Specifies how an element should float.</td>
+        <td>Wrapping text around images or creating layouts.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><code>width</code></td>
+        <td>Sets the width of an element.</td>
+        <td>Defining the size of containers, images, etc.</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><code>height</code></td>
+        <td>Sets the height of an element.</td>
+        <td>Defining the size of containers, images, etc.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><code>text-align</code></td>
+        <td>Aligns the text inside an element.</td>
+        <td>Centering text, aligning text to the left/right.</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><code>box-shadow</code></td>
+        <td>Adds shadow effects around an element.</td>
+        <td>Creating depth and visual effects for cards, buttons, etc.</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><code>opacity</code></td>
+        <td>Sets the transparency level of an element.</td>
+        <td>Creating transparent elements or hover effects.</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><code>z-index</code></td>
+        <td>Controls the stacking order of elements.</td>
+        <td>Managing overlapping elements (e.g., modals, dropdowns).</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td><code>flex</code></td>
+        <td>Defines flexible length for flex items.</td>
+        <td>Creating flexible layouts with CSS Flexbox.</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td><code>grid</code></td>
+        <td>Defines a grid layout for elements.</td>
+        <td>Creating complex layouts with CSS Grid.</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td><code>transition</code></td>
+        <td>Defines smooth transitions for property changes.</td>
+        <td>Adding animations for hover effects, etc.</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td><code>transform</code></td>
+        <td>Applies transformations like rotate, scale, etc.</td>
+        <td>Creating animations and visual effects.</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td><code>animation</code></td>
+        <td>Defines animations for elements.</td>
+        <td>Creating complex animations.</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td><code>border-radius</code></td>
+        <td>Rounds the corners of an element.</td>
+        <td>Creating rounded buttons, images, or containers.</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td><code>box-sizing</code></td>
+        <td>Defines how the width and height of an element are calculated.</td>
+        <td>Ensuring consistent sizing with padding and border included (e.g., <code>border-box</code>).</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td><code>cursor</code></td>
+        <td>Specifies the mouse cursor to be displayed when hovering over an element.</td>
+        <td>Changing the cursor for buttons, links, or interactive elements.</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td><code>overflow</code></td>
+        <td>Controls how content that overflows an element's box is handled.</td>
+        <td>Handling scrollable content or hiding overflow (e.g., <code>hidden</code>, <code>scroll</code>).</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td><code>visibility</code></td>
+        <td>Controls whether an element is visible or hidden.</td>
+        <td>Hiding elements without removing them from the layout (e.g., <code>hidden</code>).</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td><code>white-space</code></td>
+        <td>Controls how whitespace inside an element is handled.</td>
+        <td>Preserving line breaks and spaces in text (e.g., <code>pre</code>, <code>nowrap</code>).</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td><code>text-decoration</code></td>
+        <td>Adds decorations to text, such as underlines or strikethroughs.</td>
+        <td>Styling links, headings, or decorative text.</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td><code>text-transform</code></td>
+        <td>Controls the capitalization of text.</td>
+        <td>Changing text to uppercase, lowercase, or capitalized (e.g., <code>uppercase</code>).</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td><code>line-height</code></td>
+        <td>Sets the height of a line of text.</td>
+        <td>Improving readability and spacing in paragraphs.</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td><code>letter-spacing</code></td>
+        <td>Adjusts the spacing between characters in text.</td>
+        <td>Styling headings or creating visual effects in text.</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td><code>word-spacing</code></td>
+        <td>Adjusts the spacing between words in text.</td>
+        <td>Styling paragraphs or creating visual effects in text.</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td><code>vertical-align</code></td>
+        <td>Aligns an element vertically within its container.</td>
+        <td>Aligning text or inline elements (e.g., images) vertically.</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td><code>background-image</code></td>
+        <td>Sets one or more background images for an element.</td>
+        <td>Adding decorative backgrounds to sections or buttons.</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td><code>background-size</code></td>
+        <td>Defines the size of the background image.</td>
+        <td>Scaling background images to fit or cover elements.</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td><code>background-position</code></td>
+        <td>Sets the starting position of a background image.</td>
+        <td>Positioning background images within elements.</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td><code>background-repeat</code></td>
+        <td>Controls how a background image is repeated.</td>
+        <td>Creating patterns or preventing repetition of background images.</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td><code>outline</code></td>
+        <td>Draws a line around an element, outside the border.</td>
+        <td>Highlighting elements (e.g., for accessibility or focus states).</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td><code>resize</code></td>
+        <td>Controls whether an element is resizable by the user.</td>
+        <td>Allowing users to resize textareas or other elements.</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td><code>clip-path</code></td>
+        <td>Clips an element to a specific shape or region.</td>
+        <td>Creating custom shapes or masking elements.</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td><code>filter</code></td>
+        <td>Applies graphical effects like blur or grayscale to an element.</td>
+        <td>Creating visual effects for images or backgrounds.</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

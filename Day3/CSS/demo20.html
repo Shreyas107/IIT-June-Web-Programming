@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Flexbox Example</title>
+  <style>
+    /* Flex container for the navbar */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      /* Distribute items evenly */
+      background-color: #333;
+      padding: 10px;
+    }
+
+    /* Navbar items */
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Hover effect for links */
+    nav a:hover {
+      background-color: #555;
+      color: red;
+    }
+
+    /* Flex container for the content area */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .box {
+      background-color: rgb(241, 148, 148);
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+
+    .box:hover {
+      background-color: coral;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+
+</html>
