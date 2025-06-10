@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Methods</title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #btn1 {
+            background-color: lightblue;
+        }
+
+        #btn2 {
+            background-color: lightgreen;
+        }
+
+        #btn3 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Event Listener Methods</h2>
+
+    <!-- Method 1: addEventListener -->
+    <button id="btn1">Using addEventListener</button>
+
+    <!-- Method 2: onclick property in JS -->
+    <button id="btn2">Using .onclick in JavaScript</button>
+
+    <!-- Method 3: onclick attribute in HTML -->
+    <button id="btn3" onclick="showAlert()">Using onclick in HTML</button>
+
+    <script>
+        // Method 1: Using addEventListener (Recommended)
+        const btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function () {
+            alert("Button 1: addEventListener method");
+        });
+
+        // Method 2: Using .onclick property in JavaScript
+        const btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+            alert("Button 2: .onclick property method");
+        };
+
+        // Method 3: onclick attribute is handled in HTML
+        function showAlert() {
+            alert("Button 3: onclick attribute in HTML");
+        }
+    </script>
+
+</body>
+
+</html>
