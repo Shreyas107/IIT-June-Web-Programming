@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple Validation</title>
+</head>
+
+<body>
+  <!-- Name input and error message -->
+  Name: <input type="text" id="txtName" />
+  <div id="divErrorForName" style="color: red"></div>
+  <br />
+
+  <!-- Address input and error message -->
+  Address: <input type="text" id="txtAddress" />
+  <div id="divErrorForAddress" style="color: red"></div>
+  <br />
+
+  <!-- Button to trigger validation -->
+  <input type="button" value="Click Me" id="btnValidate" />
+  <hr />
+
+  <script>
+    // Generic function to check if a field is empty
+    function ValidateForEmpty(inputId, errorDivId, errorMessage) {
+      const inputElement = document.getElementById(inputId);
+      const errorElement = document.getElementById(errorDivId);
+
+      if (inputElement.value.trim() === "") {
+        errorElement.innerText = errorMessage;
+      } else {
+        errorElement.innerText = "";
+        console.log(inputElement.value);
+      }
+    }
+
+    // Function to run when validating the form
+    function DoValidate() {
+      ValidateForEmpty("txtName", "divErrorForName", "Name is required");
+      ValidateForEmpty("txtAddress", "divErrorForAddress", "Address is required");
+    }
+
+    // Add event listener to the button
+    document.getElementById("btnValidate").addEventListener("click", DoValidate);
+  </script>
+</body>
+
+</html>

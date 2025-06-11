@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple Form Validation</title>
+</head>
+
+<body>
+  <!-- Input for Name -->
+  Name: <input type="text" id="txtName" />
+  <div id="divErrorForName" style="color: red"></div>
+  <br />
+
+  <!-- Input for Address -->
+  Address: <input type="text" id="txtAddress" />
+  <div id="divErrorForAddress" style="color: red"></div>
+  <br />
+
+  <!-- Button to trigger validation -->
+  <input type="button" value="Click Me" id="btnValidate" />
+  <hr />
+
+  <script>
+    // Function to validate inputs
+    function validateForm() {
+
+      const nameInput = document.getElementById("txtName");
+      const nameError = document.getElementById("divErrorForName");
+
+      const addressInput = document.getElementById("txtAddress");
+      const addressError = document.getElementById("divErrorForAddress");
+
+      // Validate Name
+      if (nameInput.value.trim() === "") {
+        nameError.innerText = "Name is required.";
+      } else {
+        nameError.innerText = "";
+        console.log("Hello " + nameInput.value);
+      }
+
+      // Validate Address
+      if (addressInput.value.trim() === "") {
+        addressError.innerText = "Address is required.";
+      } else {
+        addressError.innerText = "";
+        console.log(addressInput.value);
+      }
+    }
+
+    // Add event listener to the button
+    document.getElementById("btnValidate").addEventListener("click", validateForm);
+  </script>
+</body>
+
+</html>

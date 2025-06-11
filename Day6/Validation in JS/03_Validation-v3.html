@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Demo Solution</title>
+</head>
+
+<body>
+  <!-- Name input -->
+  Name: <input type="text" id="txtName" />
+  <div id="divErrorForName" style="color: red"></div>
+  <br />
+
+  <!-- Address input -->
+  Address: <input type="text" id="txtAddress" />
+  <div id="divErrorForAddress" style="color: red"></div>
+  <br />
+
+  <!-- Button  -->
+  <input type="button" value="Click Me" id="btnValidate" />
+  <hr />
+
+  <!-- Load external JS file -->
+  <script src="Validation.js"></script>
+
+
+  <script>
+    function DoValidate() {
+      ValidateForEmpty("txtName", "divErrorForName", "Name is required");
+      ValidateForEmpty("txtAddress", "divErrorForAddress", "Address is required");
+    }
+
+    document.getElementById("btnValidate").addEventListener("click", DoValidate);
+  </script>
+</body>
+
+</html>

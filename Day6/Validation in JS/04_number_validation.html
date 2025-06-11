@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marks Validation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mt-5 w-50 p-5 shadow rounded">
+        <h2 class="mb-4">Enter Marks (1 to 100)</h2>
+
+        <div class="mb-3">
+            <input type="number" id="marksInput" class="form-control" placeholder="Enter your marks" />
+            <div id="marksError" class="text-danger mt-2"></div>
+        </div>
+
+        <button class="btn btn-primary" id="validateBtn">Validate</button>
+    </div>
+
+    <script>
+        document.getElementById("validateBtn").addEventListener("click", function () {
+            const input = document.getElementById("marksInput").value.trim();
+            const errorDiv = document.getElementById("marksError");
+
+            // Convert input to a number
+            const marks = Number(input);
+
+            // or const marks = parseInt(input);
+
+            // Validation logic
+            if (input === "") {
+                errorDiv.innerText = "Please enter your marks.";
+            } else if (isNaN(marks)) {
+                errorDiv.innerText = "Input must be a number.";
+            } else if (marks < 1 || marks > 100) {
+                errorDiv.innerText = "Marks must be between 1 and 100.";
+            } else {
+                errorDiv.innerText = "";
+                alert("Marks are valid: " + marks);
+            }
+        });
+    </script>
+</body>
+
+</html>

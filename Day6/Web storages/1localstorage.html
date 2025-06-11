@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Storage Example</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container mt-5 w-50 shadow p-5 rounded ">
+    <h2 class="mb-4">Local Storage Example</h2>
+
+    <div class="mb-3">
+      <input type="text" id="localInput" class="form-control" placeholder="Enter something" />
+    </div>
+
+    <div class="mb-3">
+      <button class="btn btn-primary me-2" id="btnSave">Save to Local Storage</button>
+      <button class="btn btn-success me-2" id="btnLoad">Load from Local Storage</button>
+      <button class="btn btn-danger" id="btnClear">Clear Local Storage</button>
+    </div>
+
+    <p id="localOutput" class="fs-5 text-info mt-4 "></p>
+  </div>
+
+  <script>
+    function saveToLocal() {
+      const input = document.getElementById("localInput").value;
+      localStorage.setItem("data", input);
+      alert("Saved to local storage");
+    }
+
+    function loadFromLocal() {
+      const data = localStorage.getItem("data");
+      document.getElementById("localOutput").innerText = data
+        ? `Stored Value: ${data}`
+        : "No data found";
+    }
+
+    function clearLocal() {
+      localStorage.clear();
+      alert("Local storage cleared");
+      document.getElementById("localOutput").innerText = "";
+    }
+
+    // Attach event listeners
+    document.getElementById("btnSave").addEventListener("click", saveToLocal);
+    document.getElementById("btnLoad").addEventListener("click", loadFromLocal);
+    document.getElementById("btnClear").addEventListener("click", clearLocal);
+  </script>
+</body>
+
+</html>
