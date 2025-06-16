@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add List Item</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Shopping List</h2>
+    <ul id="shoppingList">
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <input type="text" id="newItem" placeholder="Enter new item" />
+    <button id="addItemButton">Add Item</button>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#addItemButton').click(function () {
+                var newItem = $('#newItem').val();
+
+                if (newItem) {
+                    $('#shoppingList').append(`<li> ${newItem}</li>`);
+                    $('#newItem').val('');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+  <button id="btn">Fetch Data</button>
+  <ul id="userList"></ul>
+
+  <table border="1px solid black">
+    <tr>
+      <th>name</th>
+      <th>email</th>
+    </tr>
+    <tbody id="tbody">
+
+
+    </tbody>
+  </table>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#btn").click(function () {
+        $.ajax({
+          url: "https://jsonplaceholder.typicode.com/users",
+          success: function (result) {
+            console.log(result);
+
+            debugger
+
+            displayUsers(result);
+          },
+          error: function (error) {
+            console.log("Error fetching data:", error);
+          },
+        });
+
+        function displayUsers(users) {
+          $("#userList").empty();
+
+          users.forEach(user => {
+            $("#userList").append(`<li>${user.name}</li>`);
+          });
+
+          users.forEach(user => {
+            $("#tbody").append(`
+               <tr>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                </tr>
+            `)
+          })
+
+
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

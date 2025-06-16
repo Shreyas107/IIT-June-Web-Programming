@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Paragraph Visibility</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Hide Paragraph</h2>
+    <button id="hideButton">Hide</button>
+    <p id="para1">This paragraph will hide on click of the Hide button</p>
+
+    <br>
+    <hr>
+
+    <h2>View Paragraph</h2>
+    <button id="viewButton">View</button>
+    <p id="para2" style="display: none;">This paragraph will be visible on click of the view button</p>
+
+
+    <br>
+    <hr>
+
+    <h2>Toggle Paragraph Visibility</h2>
+    <button id="toggleButton">Toggle Visibility</button>
+    <p id="textParagraph" style="display:none;">This is a hidden paragraph. Click the button to toggle visibility!</p>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#hideButton").click(() => {
+                $("#para1").hide()
+            })
+
+            $("#viewButton").click(() => {
+                $("#para2").show()
+            })
+
+            $('#toggleButton').click(function () {
+                // $('#textParagraph').toggle();
+                $('#textParagraph').toggle(2000);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

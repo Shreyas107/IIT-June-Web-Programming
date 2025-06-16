@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="jquery.js"></script>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: lightcoral;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 {
+            background-color: darkturquoise;
+        }
+
+        .box2 {
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="box" class="box">Hello World!</h1>
+
+    <br>
+    <br>
+
+    <button id="btn1">box1</button>
+    <button id="btn2">box2</button>
+
+    <script>
+
+        $("#btn1").click(() => {
+            // $("#box").addClass("box1")
+            $("#box").removeClass("box2").addClass("box1")
+        })
+
+        $("#btn2").click(() => {
+            // $("#box").addClass("box2")
+            $("#box").removeClass("box1").addClass("box2")
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <center>
+    <table id="myTable" style="height: 500px; width: 500px; text-align: center" border="1">
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Javascript</td>
+        <td>500</td>
+      </tr>
+    </table>
+  </center>
+
+  <script>
+    $("tr").mouseover(function () {
+      $(this).css("background-color", "orange");
+    });
+
+    $("tr").mouseout(function () {
+      $(this).css("background-color", "white");
+    });
+
+    $("tr").click(function () {
+      $(this).css("background-color", "green");
+      $(this).unbind("mouseover mouseout");
+    });
+  </script>
+</body>
+
+</html>
