@@ -45,5 +45,7 @@ VALUES
 
 -- QUERIES
 
+-- fetching rows where price is greater than 10000
+select * from orders where price > 10000;
 
 
