@@ -20,7 +20,7 @@ CREATE TABLE orders (
     quantity INT,
     price DECIMAL(10, 2),
     order_date DATE,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
 -- Inserting data into tables
@@ -49,3 +49,22 @@ VALUES
 select * from orders where price > 10000;
 
 
+-- inner join
+SELECT customers.customer_name, customers.city, phone, product_name, price, quantity
+FROM orders 
+INNER JOIN customers ON customers.customer_id = orders.customer_id;
+
+SELECT c.customer_name, c.city, o.product_name, o.price
+FROM orders o
+INNER JOIN customers c 
+ON c.customer_id = o.customer_id;
+
+SELECT c.customer_name, c.city, o.product_name, o.price
+FROM orders o, customers c
+WHERE c.customer_id = o.customer_id;
+
+
+SELECT c.customer_name, c.city, o.product_name, o.price
+FROM orders o
+RIGHT JOIN customers c 
+ON o.customer_id = c.customer_id;
