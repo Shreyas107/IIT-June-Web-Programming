@@ -1,0 +1,698 @@
+{
+	"info": {
+		"_postman_id": "74cfcfb3-ad69-4510-af49-908ca08b4e5f",
+		"name": "Course Enrollments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14138437"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "adding a student into course enrollment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Aarav\",\r\n  \"middleName\": \"Raj\",\r\n  \"lastName\": \"Sharma\",\r\n  \"gender\": \"Male\",\r\n  \"dateOfBirth\": \"2003-08-15\",\r\n  \"mobileNo\": \"9876543210\",\r\n  \"city\": \"Pune\",\r\n  \"permanentAddress\": \"Bavdhan, Pune\",\r\n  \"pincode\": \"411021\",\r\n  \"state\": \"Maharashtra\",\r\n  \"collegeName\": \"Pune Institute of Computer Technology\",\r\n  \"academicYear\": \"2024-2025\",\r\n  \"isLaptopAvailable\": true,\r\n  \"batchId\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/student/course-enroll",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"student",
+										"course-enroll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all enrollments of a student",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/student/enrollments",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"student",
+										"enrollments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Resigter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"a\",\r\n    \"password\": \"a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all courses",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/course/all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"course",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all batches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/batch/all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"batch",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/category/byId/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"category",
+								"byId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all categories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/category/all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a batch by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/batch/byId/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"batch",
+								"byId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "get all categories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{A_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/admin/category/all",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"admin",
+										"category",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add new category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"cat2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/category/add",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update category by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\": \"IIT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/category/byId/1",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"category",
+										"byId",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete category by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/category/byId/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"category",
+										"byId",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Courses",
+					"item": [
+						{
+							"name": "get all courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/course/all",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"course",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add new course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courseName\": \"Web develop in python\",\r\n    \"description\": \"something\",\r\n    \"categoryId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/course/add",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"course",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a course by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courseName\": \"Web develop in python\",\r\n    \"description\": \"updated description\",\r\n    \"categoryId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/course/update/byId/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"course",
+										"update",
+										"byId",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete course by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courseName\": \"Web develop in python\",\r\n    \"description\": \"something\",\r\n    \"categoryId\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/course/delete/byId/3",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"course",
+										"delete",
+										"byId",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Batches",
+					"item": [
+						{
+							"name": "get all batches",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/batch/all",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"batch",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get a batch by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/batch/byId/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"batch",
+										"byId",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add a new batch",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"courseId\": 2,\r\n  \"batchName\": \"Full Stack Web Development - June 2025\",\r\n  \"startDate\": \"2025-05-25\",\r\n  \"endDate\": \"2025-08-30\",\r\n  \"timeSlot\": \"Evening\",\r\n  \"duration\": \"3 Months\",\r\n  \"fees\": 299.99,\r\n  \"mode\": \"Online\",\r\n  \"location\": \"Pune\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/batch/add",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"batch",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a batch by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"courseId\": 2,\r\n  \"batchName\": \"Full Stack Web Development - June 2025\",\r\n  \"startDate\": \"2025-05-25\",\r\n  \"endDate\": \"2025-08-30\",\r\n  \"timeSlot\": \"Evening\",\r\n  \"duration\": \"1 Months\",\r\n  \"fees\": 299.99,\r\n  \"mode\": \"Offline\",\r\n  \"location\": \"Pune\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/batch/update/byId/3",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"batch",
+										"update",
+										"byId",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete a batch by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/batch/delete/byId/1",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"batch",
+										"delete",
+										"byId",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Enrollments",
+					"item": [
+						{
+							"name": "get all students enrolled in a batch",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/enroll/batch/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"enroll",
+										"batch",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{A_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/admin/all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admin",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{A_TOKEN}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3333/",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlIjoic3R1ZGVudCIsImlhdCI6MTc0NzQ5Njc3MiwiZXhwIjoxNzQ4MTAxNTcyfQ.IBjAhJvHWx7fSr4r2GS0mTC-yfCYv86pH6PRU_SYhy4",
+			"type": "string"
+		},
+		{
+			"key": "A_TOKEN",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJ1c2VyUm9sZSI6ImFkbWluIiwiaWF0IjoxNzQ3NDk2MjI2LCJleHAiOjE3NDgxMDEwMjZ9.IyAptWdbRsnXjWGI-uB_4KnNub7yRBIiuioZ2ivMJkg",
+			"type": "string"
+		}
+	]
+}
