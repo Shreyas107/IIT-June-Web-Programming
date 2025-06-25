@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Batches</title>
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Notyf.css -->
+    <link href="https://cdn.jsdelivr.net/npm/notyf@3.7.0/notyf.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <center>
+        <h1 class="mt-5">Display All Batches</h1>
+
+        <button id="fetchBtn" class="btn btn-primary mt-3 btn-lg">Fetch all Batches</button>
+
+        <table class="table table-primary table-hover table-striped-columns mt-5">
+            <thead>
+                <tr>
+                    <th>Batch Name</th>
+                    <th>Course Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Duration</th>
+                    <th>Fees</th>
+                    <th>Mode</th>
+                    <th>Timeslot</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </center>
+
+    <!-- notyf.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.7.0/notyf.min.js"></script>
+
+    <!-- userService.js -->
+    <script src="../scripts/batchService.js"></script>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener("click", () => {
+            fetch("http://localhost:4000/batch/all")
+                .then((response) => {
+                    return response.json()
+                })
+                .then((batches) => {
+                    console.log("batches: ", batches);
+                    debugger
+
+                    displayBatches(batches.results);
+                })
+        });
+
+        function displayBatches(batches) {
+            console.log("display");
+
+            const tbody = document.getElementById('tbody');
+            tbody.innerHTML = ``
+
+
+
+            batches.forEach((batch) => {
+                const row = `
+                    <tr>
+                        <td>${batch.batch_name}</td>
+                        <td>${batch.course_name}</td>
+                        <td>${batch.start_date}</td>
+                        <td>${batch.end_date}</td>
+                        <td>${batch.duration}</td>
+                        <td>${batch.fees}</td>
+                        <td>${batch.mode}</td>
+                        <td>${batch.time_slot}</td>
+                        <td>${batch.location}</td>
+                        <td><i class="bi bi-trash3 btn-danger"></i></td>
+                        
+                    </tr>
+                `
+                tbody.innerHTML += row
+            });
+        }
+    </script>
+
+</body>
+
+</html>
